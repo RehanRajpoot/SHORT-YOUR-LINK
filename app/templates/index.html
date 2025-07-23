@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% block title %}Shorten a URL{% endblock %}
+
+{% block content %}
+<div class="row">
+  <!-- left form card -->
+  <div class="col-md-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title"><i class="bi bi-link-45deg"></i> Shorten a long URL</h5>
+        <form method="POST">
+          <div class="mb-3">
+            <input type="url"
+                   class="form-control"
+                   name="original_url"
+                   placeholder="Enter long link here"
+                   required>
+          </div>
+          <hr>
+          <h6>🔧 Customize your link (optional)</h6>
+          <div class="input-group mb-3">
+            <span class="input-group-text">{{ request.host.split('://')[-1] }}/</span>
+            <input type="text"
+                   class="form-control"
+                   name="custom_alias"
+                   placeholder="Enter alias (e.g. my-alias)">
+          </div>
+          <button class="btn btn-success w-100">Shorten URL</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- right marketing copy -->
+  <div class="col-md-7 text-white marketing-panel">
+    <h2>The Original URL Shortener</h2>
+    <p>Create shorter URLs with Short Your Link.</p>
+    <p>
+      Want more out of your link shortener? Track link analytics, use branded domains for fully custom links, and manage your links with our paid plans.
+    </p>
+    <div class="mt-4">
+      <a class="btn btn-outline-light me-2">View Plans</a>
+      <a class="btn btn-light">Create Free Account</a>
+    </div>
+    <ul class="list-unstyled mt-5">
+      <li>✅ Detailed Link Analytics</li>
+      <li>✅ Fully Branded Domains</li>
+      <li>✅ Bulk Short URLs</li>
+      <li>✅ Link Management Features</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+/* Apply gradient to full screen */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* deep blue gradient */
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+/* Header styling */
+.site-header {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.site-header h1 {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Main layout spacing */
+main {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+/* White card for form */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+
+/* Input field styles */
+input.form-control,
+input.form-control:focus {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+}
+
+/* Submit button */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Right-side panel */
+.marketing-panel {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  color: #fff;
+}
+
+.marketing-panel h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.marketing-panel p,
+.marketing-panel li {
+  color: #e3e3e3;
+}
+
+/* Button styling */
+.btn-outline-light:hover {
+  background: white;
+  color: #000;
+}
