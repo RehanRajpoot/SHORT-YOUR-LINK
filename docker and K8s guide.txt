@@ -1,0 +1,19 @@
+docker login
+docker build -t short-url-app .
+docker run -p 5000:5000 short-url-app
+docker tag short-url-app rehanrajpoot/short-url-app:latest
+docker push rehanrajpoot/short-url-app:latest
+
+
+
+minikube version
+minikube start
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+
+kubectl get pods
+kubectl get services
+
+minikube service short-url-service
+minikube start --driver=docker
+kubectl get nodes
