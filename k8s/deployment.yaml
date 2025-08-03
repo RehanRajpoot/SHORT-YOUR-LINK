@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: short-url-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: short-url
@@ -13,7 +13,8 @@ spec:
         app: short-url
     spec:
       containers:
-      - name: short-url-container
-        image: rehanrajpoot/short-url-app:latest
-        ports:
-        - containerPort: 5000
+        - name: short-url-container
+          image: short-url-app:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
